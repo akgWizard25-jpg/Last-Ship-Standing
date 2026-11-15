@@ -997,6 +997,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7868129317016485799, guid: d63b4bcd1a9a8ea4a84998a683c229d1, type: 3}
   m_PrefabInstance: {fileID: 1261118909}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &125510738 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7829183789469238012, guid: b29a633c3e4af2543aa90ea532ea0f25, type: 3}
+  m_PrefabInstance: {fileID: 1001038878}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &130419327
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6680,11 +6685,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7894781323916958405, guid: 014355c6a2c5d6d48b3a4e514c027fcf, type: 3}
   m_PrefabInstance: {fileID: 1440118843}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &769439230 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7055000610026159190, guid: b29a633c3e4af2543aa90ea532ea0f25, type: 3}
-  m_PrefabInstance: {fileID: 1001038878}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &769949534
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7419,10 +7419,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0ef2575ee55cbb4db9e7907c525fd3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThirdPersonCamera
-  target: {fileID: 769439230}
-  offset: {x: 2.5, y: 6.6, z: -10}
-  followSpeed: 5
-  lookHeight: 1.5
+  target: {fileID: 125510738}
+  followHeight: 3
+  followDistance: 10
+  followPositionSmoothness: 3
+  lookAheadDistance: 15
+  lookHeight: 1
+  rotationSmoothness: 4
+  followShipPitch: 1
+  followShipYaw: 1
+  followShipRoll: 0
+  minDistance: 5
+  maxDistance: 20
+  zoomSpeed: 3
+  zoomSmoothness: 5
 --- !u!114 &826764066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8581,6 +8591,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 652906622761174909, guid: b29a633c3e4af2543aa90ea532ea0f25, type: 3}
+      propertyPath: maxSpeed
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 652906622761174909, guid: b29a633c3e4af2543aa90ea532ea0f25, type: 3}
+      propertyPath: bankAngle
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 652906622761174909, guid: b29a633c3e4af2543aa90ea532ea0f25, type: 3}
+      propertyPath: acceleration
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 652906622761174909, guid: b29a633c3e4af2543aa90ea532ea0f25, type: 3}
+      propertyPath: bankSmoothness
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 652906622761174909, guid: b29a633c3e4af2543aa90ea532ea0f25, type: 3}
+      propertyPath: rotationSmoothness
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1792379008543827934, guid: b29a633c3e4af2543aa90ea532ea0f25, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7055000610026159190, guid: b29a633c3e4af2543aa90ea532ea0f25, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
